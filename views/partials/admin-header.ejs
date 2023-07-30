@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png">
+    <title><%= typeof title != 'undefined' ? title: 'Sam Agbamuche Ministry - Welcome' %></title>
+    <!-- Custom CSS -->
+    
+    <!-- <link href="/admin-css/lib/amchart/export.css" rel="stylesheet"> -->
+    <link href="/admin-css/lib/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/admin-css/lib/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/admin-css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+
+
+
+    <!-- <link href="/admin/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
+   
+</head>
+
+<body class="header-fix fix-sidebar">
+    
+    <!-- Main wrapper  -->
+    <div id="main-wrapper">
+        <!-- header header  -->
+        <div class="header">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- Logo -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/admin/dashboard" title="HOME PAGE">
+                        <!-- Logo icon -->
+                        <b><img src="/img/apple-touch-icon.png" alt="homepage" class="dark-logo" /></b>
+                        <!--End Logo icon -->
+                       
+                       
+                    </a>
+
+                
+                </div>
+                <!-- End Logo -->
+                <div class="navbar-collapse">
+                    <!-- toggle and nav items -->
+
+                    <ul class="navbar-nav mr-auto mt-md-0">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link toggle-nav hidden-md-up text-muted  " href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggle hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <!-- Messages -->
+                        <li class="nav-item dropdown mega-menu"> <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img class = "dash-Img" src="/img/apple-touch-icon.png" alt="logo image" class="dark-logo" /></a>
+                           
+                        </li>
+                        <!-- End Messages -->
+                    </ul>
+
+               
+                    <!-- User profile and search -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- Comment -->
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-bell"></i>
+								<div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+							</a>
+                        
+                        </li> -->
+                        <!-- End Comment -->
+                        <!-- Messages -->
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-envelope"></i>
+								<div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+							</a>
+                               time display-->
+                    <div id="output"></div>
+                        <!-- </li>  -->
+                        <!-- End Messages -->
+                        <!-- Profile -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right animated slideInRight">
+                                <ul class="dropdown-user">
+                                    <li role="separator" class="divider"></li>
+                                    <!-- <li><a href="#"> Profile</a></li> -->
+                                    <li><a href="#"> change password</a></li>
+                                    <!-- <li><a href="#"> Inbox</a></li> -->
+                                    <!-- <li role="separator" class="divider"></li>
+                                    <li><a href="#"> Setting</a></li> -->
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="/"> Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- End header header -->
+        <!-- Left Sidebar  -->
+        <div class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebar-menu">
+                        <li class="nav-devider"></li>
+                        <!-- <li> <a href="/dashboard"><class="nav-label">Home</a></li> -->
+                        <li><a href="/admin/dashboard" class="fa fa-tachometer"></i>  Dashboard</a> 
+                            <!-- <span class="label label-rouded label-primary pull-right"></span> -->
+
+                            <!-- <li><a href="index2.html">Index</a></li> -->
+                         </li> 
+
+                       
+
+                        <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Events</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="/admin/all-events">All</a></li>
+                                <li><a href="/admin/new-events">New Event</a></li>
+                               
+                           
+                            </ul>
+                        </li>
+
+                          <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Message</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="/admin/new-messages">New Message</a></li>
+                              <li><a href="/admin/new-events">All Event</a></li>
+                           
+                            </ul>
+                        </li>
+
+
+                        <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-cloud"></i><span class="hide-menu">Rhema</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="/admin/add-rhema"> Add New </a></li>
+                             <li><a href="/admin/all-rhema">All Rhema</a></li>
+                            </ul>
+                        </li>
+
+                        <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Library</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="/admin/add-lib">Add New</a></li>
+                             <li><a href="/admin/all-rhema">All Library</a></li>
+                            </ul>
+                        </li>
+                      
+                      <!-- <li><a href="#">Rhema</a></li> -->
+                    
+                        <!-- <li> <a class="has-arrow " href="#" aria-expanded="false"><i class="fa fa-envelope"></i><span class="hide-menu">Mailbox</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="email-compose.html">Compose</a></li>
+                                <li><a href="email-read.html">Read</a></li>
+                                <li><a href="email-inbox.html">Inbox</a></li>
+                            </ul>
+                        </li> -->
+                       
+                    

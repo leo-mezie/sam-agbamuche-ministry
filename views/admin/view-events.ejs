@@ -1,0 +1,83 @@
+<%- include('../partials/admin-header') %>
+                     
+<!--                      
+                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-map-marker"></i><span class="hide-menu">Maps</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="map-vector.html">Map</a></li>
+                            </ul>
+                        </li>  -->
+                      
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </div>
+        <!-- End Left Sidebar  -->
+        <!-- Page wrapper  -->
+        <div class="page-wrapper">
+            <!-- Bread crumb -->
+            <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-primary">Dashboard</h3> </div>
+                <div class="col-md-7 align-self-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active">Events Details</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- End Bread crumb -->
+            <!-- Container fluid  -->
+            <div class="container-fluid">
+                <!-- Start Page Content -->
+                
+
+                    <!-- main page content goes here -->
+                        <%- include('../partials/messages') -%>
+                  <div class="container mt-5 w-50">
+
+    <h2 class="mb-4"> Event Details</h2>
+
+    <form action="/admin/view-events/<%= employee.id %>  enctype="multipart/form-data">
+        <input type="hidden" name="_method" value="PUT">
+
+        <div class="col col-12">
+        <label for="image">Event Name</label>
+        <input type="text" value="<%= employee.name %>" name="name" class="form-control" disabled placeholder="Event Name">
+        </div>
+
+        <div class="col col-12">
+        <label for="image">Event Date</label>
+        <input type="text" value="<%= employee.evdate %>" name="designation" class="form-control" disabled placeholder="Event Date">
+        </div>
+
+        <div class="col col-12">
+        <label for="image">Time</label>
+        <input type="text" value="<%= employee.time %>" name="salary" class="form-control" disabled placeholder="Employee Salary">
+        </div>
+        <div class="col col-12">
+        <label for="image">Date of Registration</label>
+        <input type="text" value="<%= employee.date %>" name="date" class="form-control" disabled placeholder="Reg Date">
+        </div>
+         <div class="col col-12">
+        <label for="image">Image</label>
+        <input type="text" value="<%= employee.image %>" name="date" class="form-control" disabled >
+        </div>
+
+          <div class="col-12">
+          <label for="description" class="form-label">Description</label>
+          <textarea type="text" name="description"  class="form-control" disabled cols="50" rows="10"><%= employee.description %></textarea>
+          </div> 
+
+
+       
+
+    </form>
+</div>
+
+                <div class="row">
+                  
+            <!-- End Container fluid   
+            footer --> 
+            <%- include('../partials/admin-footer') %>
